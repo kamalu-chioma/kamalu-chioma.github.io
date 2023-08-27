@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>Kamalu-Chioma</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* Basic styles for the accordion */
+      .accordion {
+    display: flex;
+    flex-direction: column;
+
+       .accordion-content {
+  display: none;
+}
+  }
+  .accordion-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-icon {
+    font-size: 20px;
+  }
+  .accordion-content {
+    display: none;
+    padding: 10px;
+  }
+  .accordion-content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .accordion-content th, .accordion-content td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+
+    </style>
+    </head>
+
+    <body background="download.png"
+
+	class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+                
+                <ul class="actions">
+                    <li><a href="index.html" class="button icon solid solo fa-arrow-down scrolly">Back</a></li>
+                </ul>
+            </div>
+
+        <!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Featured Projects</a></li>
+							<li class="active"> <a href="project_list.html">Project categories </a> </li>
+              <li ><a href="Blog.html">Blog Posts</a></li>
+							<li > <a href="contact.html">Meet me</a> </li>
+						</ul>
+						<ul class="icons">
+
+								
+							<li><a href="https://github.com/kamalu-chioma" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://medium.com/@Chioma_Kamalu" target="_blank" rel="noopener noreferrer" class="icon brands alt fa fa-medium"><span class="label">Medium</span></a></li>
+							<li><a href="https://public.tableau.com/app/profile/chioma.kamalu" target="_blank" rel="noopener noreferrer" class="fa fa-table" aria-hidden="true"><span class="label"></span></a></li>
+							<li><a href="https://www.linkedin.com/in/chioma-kamalu-chimere/" target="_blank" rel="noopener noreferrer" class="icon brands alt fa fa-linkedin"><span class="label">Linkedin</span></a></li>
+
+
+						</ul>
+						</ul>
+					</nav>
+
+<!-- Main -->
+<div id="main">
+  <!--accordion for categries-->
+
+  
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(1)">
+      A
+      <div class="accordion-icon">+</div>
+    </div>
+    <div class="accordion-content" id="accordion-content-1">
+
+        <!--Table listing of projects-->
+        <table style="width:100%">
+
+            <tr>
+              <th>S/N</th>
+              <th>Project</th>
+              <th>Tools </th>
+            </tr>
+
+
+            <tr>
+              <td>1</td>
+              <td><a href="https://public.tableau.com/views/AnalyzingtherelationshipbetweensomefactorsandFinalGradeofStudents/Story1?:language=en-GB&:display_count=n&:origin=viz_share_link" target="_blank">Analyzing the relationship between some factors and Final Grade of Students</a></td>
+              <td>Tableau, Excel, Google forms</td>
+            </tr>
+
+
+            <tr>
+              <td> 2 </td>
+              <td><a href= "https://www.canva.com/design/DAFEOg9Crrk/fc34VG4f51zFvhZcVZbrPA/view?utm_content=DAFEOg9Crrk&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent" target="_blank" >Data Science Vs Data Analysis(A guide I presented to absolute beginners)</a></td>
+              <td>Canva</td>
+            </tr>
+            
+
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/kamalu-chioma/Youtube_comment_scraping-Sentiment_analysis" target="_blank">Sentiment Analysis on Youtube comments</a></td>
+                <td>Python, Obsei, Pandas</td>
+              </tr>
+
+          
+
+              <tr>
+                <td>4</td>
+                <td><a href="https://github.com/kamalu-chioma/Bad-Passwords-using-NIST-Guidelines" target="_blank">Bad Passwords using the NIST Guidelines</a></td>
+                <td>Pandas, Python</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td><a href="https://drive.google.com/file/d/1xgMZ2qcX5JLMQ5X-AFSUUyW1OrRriQrl/view?usp=sharing" target="_blank">Regression Analysis Of The Time Spent On The Internet
+                    And Studying Time On Academic Performance (*School project)</a></td>
+                <td>SPSS, Google forms</td>
+              </tr>
+              
+              <tr>
+                <td>6</td>
+                <td><a href = "https://colab.research.google.com/drive/1eAk9qwYFoP9iR23xWDPk-TDwQJ9A38zj?usp=sharing" target="_blank"> World happiness report (EDA) </a></td>
+                <td>Python </td>
+              </tr>
+          </table>
+           </div>
+
+           <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(2)">
+              B
+              <div class="accordion-icon">+</div>
+            </div>
+            <div class="accordion-content" id="accordion-content-2">
+              <!-- Your content here -->
+              <table style="width:100%">
+
+                <tr>
+                  <th>S/N</th>
+                  <th>Project</th>
+                  <th>Technologies </th>
+                </tr>
+    
+              <tr>
+                <td>1</td>
+                <td><a href="https://public.tableau.com/views/CustomerAnalysis_16553850512120/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link" target="_blank">Customer Analysis</a></td>
+                <td>Tableau</td>
+              </tr>
+  
+              <tr>
+                <td>2</td>
+                <td><a href="https://kamalu-chioma-love-calc-lovecal-app-jc051l.streamlitapp.com/" target="_blank"> Love calculator</a> </td>
+                <td>Streamlit, Python</td>
+              </tr>
+            </table>
+            </div>
+          </div>
+          
+
+
+            <div class="accordion">
+              <div class="accordion-header" onclick="toggleAccordion(3)">
+                C
+                <div class="accordion-icon">+</div>
+              </div>
+              <div class="accordion-content" id="accordion-content-3">
+                <table style="width:100%">
+                  <tr>
+                    <th>S/N</th>
+                    <th>Project</th>
+                    <th>Technologies </th>
+                  </tr>
+                  <tr>
+                  </tr>
+       
+                </table>
+              </div>
+          
+        
+    
+                <div class="accordion">
+                  <div class="accordion-header" onclick="toggleAccordion(4)">
+                   D
+                    <div class="accordion-icon">+</div>
+                  </div>
+                  <div class="accordion-content" id="accordion-content-4">
+                    <table style="width:100%">
+                      <tr>
+                        <th>S/N</th>
+                        <th>Project</th>
+                        <th>Technologies </th>
+                      </tr>
+                      <tr>
+                      </tr>
+           
+                    </table>
+                       <div> 
+              
+          <script>
+            function toggleAccordion(sectionNumber) {
+    const content = document.getElementById(`accordion-content-${sectionNumber}`);
+    const icon = content.previousElementSibling.querySelector('.accordion-icon');
+    
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      icon.textContent = "-";
+    } else {
+      content.style.display = "none";
+      icon.textContent = "+";
+    }
+  }
+            </script>
+
+   </body>
+</html>
