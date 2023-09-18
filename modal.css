@@ -1,0 +1,44 @@
+/* Add this CSS for the flex container and project cards */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.project-details {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-details li {
+  font-size: 0.9em;
+}
+
+.project-details li:before {
+  content: "•";
+  margin-right: 0.5em;
+}
+
+.project-card .button {
+  margin-top: 10px;
+}
