@@ -20,16 +20,76 @@
     <!-- Intro -->
     <div id="intro">
 
-      <h4>Hello👋, Welcome to my Portfolio </h4>
-      <h2> Chioma Kamalu </h2>
-      <h3>Data Scientist</h3>
+     <h4 id="greeting">Hello👋, Welcome to my Portfolio</h4>
+<h2 id="name">Chioma Kamalu</h2>
+<h3 id="profession">Data Scientist</h3>
 
-     <blockquote>
-     <p><strong>Profile:</strong><br>
-     Data science professional with 3+ years of experience in analytics, machine learning, programming, and web development. Skilled in data processing, visualization, and design, with a focus on efficiency and accuracy.</p> 
-       <p><strong>Portfolio:</strong><br>
-     Highlights of select leisure projects showcasing expertise and creativity.</p>
-     </blockquote>
+<script>
+const greetingElement = document.getElementById("greeting");
+const nameElement = document.getElementById("name");
+const professionElement = document.getElementById("profession");
+
+const texts = [
+  "Hello👋, Welcome to my Portfolio",
+  "Chioma Kamalu",
+  "Data Scientist"
+];
+
+let currentTextIndex = 0;
+let currentCharIndex = 0;
+let erasing = false;
+
+function typeEffect() {
+  let currentElement;
+  if (currentTextIndex === 0) currentElement = greetingElement;
+  else if (currentTextIndex === 1) currentElement = nameElement;
+  else currentElement = professionElement;
+
+  if (!erasing) {
+    currentElement.textContent = texts[currentTextIndex].substring(0, currentCharIndex + 1);
+    currentCharIndex++;
+    if (currentCharIndex === texts[currentTextIndex].length) {
+      erasing = true;
+      setTimeout(typeEffect, 1000); // Wait before erasing
+      return;
+    }
+  } else {
+    currentElement.textContent = texts[currentTextIndex].substring(0, currentCharIndex - 1);
+    currentCharIndex--;
+    if (currentCharIndex === 0) {
+      erasing = false;
+      currentTextIndex = (currentTextIndex + 1) % texts.length;
+    }
+  }
+  setTimeout(typeEffect, erasing ? 50 : 100);
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
+
+    <blockquote>
+  <p><strong>Profile:</strong><br>
+  Data science and AI development professional with over 3 years of experience in machine learning, customer analytics, and technical writing. Skilled in building intelligent systems and fine-tuning large language models (LLMs) to solve complex problems with accuracy and efficiency. Proficient in Python and experienced with data processing and advanced visualization using tools like Databricks, Tableau, SPSS, and Excel. Known for a proactive approach to continuous learning and delivering data-driven insights both individually and within collaborative teams.</p>
+  
+  <p><strong>Web Development Skills:</strong><br>
+  Equipped with expertise in Streamlit, Flask, Express, and Next.js for developing responsive, high-performance applications, and skilled in React. Eager to learn and expand my skillset to provide versatile and impactful web solutions.</p>
+  
+  <p><strong>Portfolio:</strong><br>
+  Browse featured projects showcasing my proficiency in data science, machine learning, AI development, and web development—highlighting a range of creative solutions and technical capabilities.</p>
+  
+  <p><strong>Availability:</strong><br>
+  Currently open to opportunities as a machine learning engineer, AI developer, customer analytics specialist, or web developer. Let’s connect on <a href="https://www.linkedin.com/in/chimere-chioma-kamalu/" target="_blank">LinkedIn</a> or <a href="https://www.upwork.com/freelancers/~01a231c509927a6797?mp_source=share" target="_blank">Upwork</a>, or reach out via email: <span id="email" onclick="showEmail()">click to reveal</span>.</p>
+</blockquote>
+
+<script>
+function showEmail() {
+  const email = "chiomakamalu072@gmail.com";
+  document.getElementById("email").innerHTML = `<a href="mailto:${email}">${email}</a>`;
+}
+</script>
+
+
 
 
       <header class="major">
@@ -37,10 +97,11 @@
         <ul class="icons">
           <li><img src="https://img.shields.io/badge/Data-Analysis-blue" class="icon brands"></img></li>
           <li><img src="https://img.shields.io/badge/Python-Programming-orange" class="icon brands"></img></li>
+          <li><img src="https://img.shields.io/badge/Customer-Analytics-brown" class="icon brands"></img></li>
           <li><img src="https://img.shields.io/badge/Machine%20-learning-brightgreen" class="icon brands"></img></li>
           <li><img src="https://img.shields.io/badge/Statistical-Analysis-9cf" class="icon brands"></img></li>
           <li><img src="https://img.shields.io/badge/Agile-Methodologies-yellow" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/Technical-Writing-red" class="icon brands"></img></li>
+          <li><img src="https://img.shields.io/badge/Tableau-red" class="icon brands"></img></li>
           <li><img src="https://img.shields.io/badge/Web-Programming-pink" class="icon brands"></img></li>
         </ul>
 
@@ -87,19 +148,19 @@
 
 <!-- Project -1 -->
 <div class="project-card">
-  <h3>Movie & TV Show Finder</h3>
+  <h3>Movie & TV Show Finder (in progress)</h3>
   <p>A Next.js app that helps users discover movies, search for movies, and manage a watchlist.</p>
-    <li><strong>Features:</strong></li>
+<!-- <!--     <li><strong>Features:</strong></li> -->
     <ul>
       <li>Trending Movies: Discover top movies on the homepage.</li>
-      <li>Image Search: Upload a movie flier for info on a specific movie.</li>
+      <li>Image Search: Upload a movie flier to extract info on a specific movie.</li>
       <li>Watchlist: Save movies and get personalized recommendations.</li>
       <li>AI Chat: Use the chatbot for movie suggestions and plot info.</li>
     </ul>
-    <li><strong>Tech Stack:</strong> Next.js, Image Search API</li>
+    <li><strong>Tech Stack:</strong> Next.js and a lot of APIs</li>
   </ul>
   <a href="https://movietvshow-finder.vercel.app/" target="_blank" class="button large">Live App</a>
-  <a href="https://github.com/kamalu-chioma/movietvshow-finder" target="_blank" class="button large">GitHub link (test info)</a>
+  <a href="https://github.com/kamalu-chioma/movietvshow-finder" target="_blank" class="button large">GitHub link (with test info)</a>
 
 </div>
 
@@ -108,7 +169,6 @@
          <h3>Amazon Consumer Reviews Analysis</h3>
          <p>This project provides an interactive dashboard for analyzing Amazon product reviews, including features like rating distribution, rating trends over time, and correlations between helpful votes and ratings.</p>
          <ul class="project-details">
-           <li><strong>Contributor:</strong> self</li>
            <li><strong>Tool(s):</strong> R, Shiny, Tidyverse, ggplot2</li>
          </ul>
          <a href="https://chioma-kamalu.shinyapps.io/Amazon_reviews_analysis/" target="_blank" class="button large">View Live Project</a>
@@ -119,7 +179,6 @@
           <h3>Customer Segmentation</h3>
           <p>In this project, customers were clustered by their RFM data using the K-means Clustering ML algorithm.</p>
           <ul class="project-details">
-            <li><strong>Contributor:</strong> self</li>
             <li><strong>Tool(s):</strong> Python, HTML & CSS, Flask, Git</li>
           </ul>
           <a href="https://customer-segmentation-deployment.onrender.com/" target="_blank" class="button large">View live Project</a>
@@ -160,10 +219,9 @@
           <h3>Landing Page Mockup</h3>
 <p>Explore my web design skills through this <strong>inspired landing page</strong> that showcases my ability to replicate and innovate upon popular designs.</p>
 <p>This mockup is a personal project created for educational purposes and demonstrates my proficiency in design. It is an independent creation and is not affiliated with any specific brand.</p>
-	<p>**PS: Live site in readme of repo </p>
+	<p>**PS: Live site in Readme of repo </p>
           <ul class="project-details">
-            <li><strong>Contributor:</strong> self</li>
-            <li><strong>Tool(s):</strong>HTML &  CSS </li>
+            <li><strong>Tool(s):</strong>HTML &  CSS & JS </li>
           </ul>
 	<a href="https://github.com/kamalu-chioma/Netflix-LandingPage" target="_blank" class="button large">View Repo</a>
         </div>
@@ -177,7 +235,7 @@
 <!--             <li><strong>Tool(s):</strong> SQL</li> -->
 <!--           </ul> -->
 <!--           <a href="https://github.com/kamalu-chioma/My-SQL-Projects/tree/main/Instagram%20DB%20clone" target="_blank" class="button large">View Project</a> -->
-<!--         </div> --> -->
+<!--         </div> --> 
 
 
          <!-- Project 6 -->
@@ -185,7 +243,6 @@
           <h3>BMI calculator</h3>
           <p>This project is a simple BMI calculator with Unit converter website</p>
           <ul class="project-details">
-            <li><strong>Contributor:</strong> self</li>
             <li><strong>Tool(s):</strong> HTML, CSS, JS</li>
           </ul>
 	  
