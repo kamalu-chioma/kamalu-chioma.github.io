@@ -31,8 +31,9 @@ const professionElement = document.getElementById("profession");
 
 const texts = [
   "Hello👋, Welcome to my Portfolio",
-  "Chioma Kamalu",
-  "Data Scientist"
+  "Chioma Kamalu", 
+  "Data Scientist",
+  "Web Developer"
 ];
 
 let currentTextIndex = 0;
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 
     <blockquote>
   <p><strong>Profile:</strong><br>
-  Data science and AI development professional with over 3 years of experience in machine learning, customer analytics, and technical writing. Skilled in building intelligent systems and fine-tuning large language models (LLMs) to solve complex problems with accuracy and efficiency. Proficient in Python and experienced with data processing and advanced visualization using tools like Databricks, Tableau, SPSS, and Excel. Known for a proactive approach to continuous learning and delivering data-driven insights both individually and within collaborative teams.</p>
+  Data science and AI development professional with over 3 years of experience in machine learning, customer analytics, and web development. Skilled in building intelligent systems and fine-tuning large language models (LLMs) to solve complex problems with accuracy and efficiency. Proficient in Python and experienced with data processing and advanced visualization using tools like Databricks, Tableau, SPSS, and Excel. Known for a proactive approach to continuous learning and delivering data-driven insights both individually and within collaborative teams.</p>
   
   <p><strong>Web Development Skills:</strong><br>
   Equipped with expertise in Streamlit, Flask, Express, and Next.js for developing responsive, high-performance applications, and skilled in React. Eager to learn and expand my skillset to provide versatile and impactful web solutions.</p>
@@ -157,10 +158,11 @@ function showEmail() {
       <li>Watchlist: Save movies and get personalized recommendations.</li>
       <li>AI Chat: Use the chatbot for movie suggestions and plot info.</li>
     </ul>
-    <li><strong>Tech Stack:</strong> Next.js and a lot of APIs</li>
+    <ul class="project-details"> 
+    <li><strong>Tools:</strong> Next.js, cosine similarity, and a lot of APIs</li>
   </ul>
   <a href="https://movietvshow-finder.vercel.app/" target="_blank" class="button large">Live App</a>
-  <a href="https://github.com/kamalu-chioma/movietvshow-finder" target="_blank" class="button large">GitHub link (with test info)</a>
+  <a href="https://github.com/kamalu-chioma/movietvshow-finder" target="_blank" class="button large">GitHub (with test info)</a>
 
 </div>
 
@@ -193,7 +195,6 @@ function showEmail() {
           <h3>To DO App</h3>
           <p>This is a live Python application aimed at helping users organize their daily activities. Create, view, and edit tasks with time/status; Read, Update, and delete. </p>
           <ul class="project-details">
-            <li><strong>Contributor:</strong> self</li>
             <li><strong>Tool(s):</strong> Python, SQLite, Streamlit, CRUD</li>
           </ul>
           <a href="https://share.streamlit.io/kamalu-chioma/todo-list-app-with-streamlit-and-sqlite3/main/app.py" target="_blank" class="button large">View Project</a>
@@ -207,8 +208,6 @@ function showEmail() {
           <p>This is a 1-page dashboard for an E-commerce store highlighting all the important metrics including YTDS and market shares
           </p>
           <ul class="project-details">
-            <li><strong>Data source:</strong> Kaggle</li>
-            <li><strong>Contributor:</strong> self</li>
             <li><strong>Tool(s):</strong> Excel, Tableau</li>
           </ul>
           <a href="https://public.tableau.com/app/profile/chioma.kamalu/viz/Book1_16752610232310/DASHBOARD" target="_blank" class="button large">View Project</a>
