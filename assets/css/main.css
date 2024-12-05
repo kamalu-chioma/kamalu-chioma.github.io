@@ -2156,7 +2156,7 @@ input, select, textarea {
 			font-size: 0.9rem;
 			height: 3.5rem;
 			line-height: 3.5rem;
-			padding: 0 2.75rem;
+			padding: 0 0.75rem;
 		}
 
 		@media screen and (max-width: 980px) {
