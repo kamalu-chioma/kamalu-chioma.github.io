@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+.button-container {
+  margin-top: auto; /* Push buttons to the bottom */
+  display: flex;
+  gap: 10px; /* Add spacing between buttons */
+}
+
 .project-card {
   width: 300px;
   padding: 20px;
