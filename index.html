@@ -108,14 +108,30 @@ function showEmail() {
 
         <h3>: MESSAGE :</h3>
         <ul class="icons">
-          <li><img src="https://img.shields.io/badge/Data-red" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/is%20%20The-orange" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/New-yellow" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/Oil,-Green" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/So-blue" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/Why-indigo" class="icon brands"></img></li>
-          <li><img src="https://img.shields.io/badge/Not%20%3F-purple" class="icon brands"></img></li>
+          <li><img src="https://img.shields.io/badge/Come-red" class="icon brands"></img></li>
+          <li><img src="https://img.shields.io/badge/Lets-blue" class="icon brands"></img></li>
+          <li><img src="https://img.shields.io/badge/Make-indigo" class="icon brands"></img></li>
+          <li><img src="https://img.shields.io/badge/Magic-Green" class="icon brands"></img></li>
         </ul>
+
+	<div id="currentDateTime" style="text-align: center; font-size: 1.2em; margin-top: 10px;">
+  <!-- The current date and time will appear here -->
+        </div>
+	<script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const formattedDateTime = now.toLocaleDateString('en-CA', options);
+    
+    document.getElementById("currentDateTime").textContent = `Current Time: ${formattedDateTime}`;
+  }
+
+  // Update every second
+  setInterval(updateDateTime, 1000);
+  updateDateTime(); // Initial call to display immediately
+</script>
+
+
       </header>
 
       <br />
@@ -149,12 +165,9 @@ function showEmail() {
 
   <!-- Project - AI Movie & TV Show Finder -->
   <div class="project-card">
-    <h3>AI Movie & TV Show Finder (in progress)</h3>
-    <p>Hello movie enthusiasts, let me help you find what to watch using innovative tools.</p>
-    <p>
-      Discover trending movies, image search, and save movies to your watchlist for tailored recommendations.
-      Chat with an AI assistant for personalized suggestions.
-      Log in using <strong>chioma</strong> as username and <strong>pass</strong> as password.
+    <h3>WebApp Sample Project - AI Movie & TV Show Finder (In Progress)</h3>
+    <p>Helping movie enthusiasts discover what to watch using innovative tools. Features trending movies, image search, watchlists, an AI movie assistant, and personalized recommendations</p>
+      Login using <strong>chioma</strong> as username and <strong>pass</strong> as password.
     </p>
     <ul class="project-details"> 
       <li><strong>Tools:</strong> Next.js, cosine similarity, custom AI models, Rest APIs</li>
@@ -165,8 +178,8 @@ function showEmail() {
 
     <!-- Project - Sakila Data Analysis -->
   <div class="project-card">
-    <h3>Business Analysis of Sakila DVD Rental</h3>
-    <p>Conducted business analysis of Sakila DVD Rental using SQL and Python, focusing on customer behavior, revenue optimization, and inventory insights.</p>
+    <h3>Business Analysis Sample Project - Sakila DVD Rental Analysis</h3>
+    <p>Conducted a business analysis to uncover customer behavior trends, optimize revenue, and improve inventory management.</p>
     <ul class="project-details">
       <li><strong>Tool(s):</strong> Python, SQL, pandas, matplotlib</li>
     </ul>
@@ -176,8 +189,8 @@ function showEmail() {
 
   <!-- Project - Amazon Consumer Reviews Analysis -->
   <div class="project-card">
-    <h3>Amazon Consumer Reviews Analysis</h3>
-    <p>This project provides an interactive dashboard for analyzing Amazon product reviews, including features like rating distribution, rating trends over time, and correlations between helpful votes and ratings.</p>
+    <h3>Stats/R Sample Project - Amazon Consumer Reviews Analysis</h3>
+    <p>Built an interactive dashboard analyzing Amazon reviews, including rating distributions, trends, and helpful vote correlations.</p>
     <ul class="project-details">
       <li><strong>Tool(s):</strong> R, Shiny, Tidyverse, ggplot2</li>
     </ul>
@@ -186,8 +199,8 @@ function showEmail() {
 
   <!-- Project - Customer Segmentation -->
   <div class="project-card">
-    <h3>Customer Segmentation</h3>
-    <p>In this project, customers were clustered by their RFM data using the K-means Clustering ML algorithm.</p>
+    <h3>Machine Learning Sample Project - Customer Segmentation</h3>
+    <p>Segmented customers using RFM data with K-means clustering to identify distinct customer groups and insights.</p>
     <ul class="project-details">
       <li><strong>Tool(s):</strong> Python, HTML & CSS, Flask, Git</li>
     </ul>
@@ -197,32 +210,32 @@ function showEmail() {
   </div>
 
   <!-- Project - To Do App -->
-  <div class="project-card">
-    <h3>To Do App</h3>
-    <p>This is a live Python application aimed at helping users organize their daily activities. Create, view, and edit tasks with time/status; Read, Update, and delete.</p>
-    <ul class="project-details">
-      <li><strong>Tool(s):</strong> Python, SQLite, Streamlit, CRUD</li>
-    </ul>
-    <a href="https://share.streamlit.io/kamalu-chioma/todo-list-app-with-streamlit-and-sqlite3/main/app.py" target="_blank" class="button large">View Project</a>
-    <a href="https://github.com/kamalu-chioma/ToDo-list-App-with-Streamlit-and-Sqlite3" target="_blank" class="button large">View Repo</a>
-  </div>
+<!--   <div class="project-card"> -->
+<!--     <h3>To Do App</h3> -->
+<!--     <p>This is a live Python application aimed at helping users organize their daily activities. Create, view, and edit tasks with time/status; Read, Update, and delete.</p> -->
+<!--     <ul class="project-details"> -->
+<!--       <li><strong>Tool(s):</strong> Python, SQLite, Streamlit, CRUD</li> -->
+<!--     </ul> -->
+<!--     <a href="https://share.streamlit.io/kamalu-chioma/todo-list-app-with-streamlit-and-sqlite3/main/app.py" target="_blank" class="button large">View Project</a> -->
+<!--     <a href="https://github.com/kamalu-chioma/ToDo-list-App-with-Streamlit-and-Sqlite3" target="_blank" class="button large">View Repo</a> -->
+<!--   </div> -->
 
   <!-- Project - E-commerce Sales Analysis -->
   <div class="project-card">
-    <h3>E-commerce Sales Analysis (Dashboard)</h3>
+    <h3>Dashboard Sample Project - E-commerce Sales Analysis</h3>
     <p>This is a summary dashboard for an E-commerce store highlighting all the important metrics including YTDS and market shares.</p>
     <ul class="project-details">
-      <li><strong>Tool(s):</strong> Excel, Tableau</li>
+      <li><strong>Tools:</strong> Excel, Tableau</li>
     </ul>
     <a href="https://public.tableau.com/app/profile/chioma.kamalu/viz/Book1_16752610232310/DASHBOARD" target="_blank" class="button large">View Project</a>
   </div>
 
   <!-- Project - BMI Calculator -->
   <div class="project-card">
-    <h3>BMI Calculator</h3>
+    <h3>Website Sample Project - BMI Calculator</h3>
     <p>This project is a simple BMI calculator with Unit converter website.</p>
     <ul class="project-details">
-      <li><strong>Tool(s):</strong> HTML, CSS, JS</li>
+      <li><strong>Tool(s):</strong> HTML, CSS, Javascript</li>
     </ul>
     <a href="https://kamalu-chioma.github.io/BMI_html/" target="_blank" class="button large">Live Project</a>
   </div>
